@@ -72,7 +72,7 @@ MODULES = [
 ]
 
 #BASEURL = 'http://localhost:8000'
-BASEURL = 'http://heroku-meet-travis.herokuapp.com'
+BASEURL = 'https://decide-app-pedroswe.herokuapp.com/'
 
 APIS = {
     'authentication': BASEURL,
