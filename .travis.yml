@@ -11,4 +11,10 @@ install:
 script:
 - cd decide
 - cp travis_local_settings.py local_settings.py
-- python ./manage.py test --keepdb 
+- python ./manage.py test --keepdb
+deploy:
+  provider: heroku
+  app: decide-app
+  strategy: git
+  api_key:
+    secure: dljZ1QvQv0iKYXk3AEb/6T+ciaq8x0Jgo/ePGhPIlAr/E9RuC4pDvZjn1iDj5ZEaPqAbDsbOGqM5wUwfCYCWhwQYqSnIM3xEVm0AokXzhIuLeQEWWL2xJfbk6eL3jpvy4xJB2rol9LyymCQKv4Zp9f8IxxA6wanTlSpYsHEhrB9O/WzsmhGC/sJ4mpeD4OD2/e3e8uIJ/HoDa0280oZj2FA4ve4PlPziZHdWUb0Vgnjp6njbWWrprkMxjceoNLNS9p4EVDCf7Z6l2lQwxHgI/ksEGEgraejHQOOaCTzCGTb+pC0CshKYe4vc72qTCQLFyx7gTphKez1uYhJ10GXum1mhwK6q5hC3rwba1SnIp6RRbTch24AB+5v1i/BVkn9qGMu7Kc1rPzhyGzVKuS2lpCsXKQsDnpgJyke9uP85igL6CWioDtmIkS4T5r74VMKo8a/Th4g667brxV/IuDLz+WusCJ51rjODBdvShQp0YxpGpKyk+HE0RoChTFNdYxPbAxO2lqtrHSzbJCoOMwrNmNcFyDXOCaUcAb/d58D8qiP99ZnJgefmTCt3ENdqjEtUlOz1OvcPwbEvHycwpEI9C15gI4wxh1hFTu+LOYy3Y+OZNiGlhITS13G2lLIzFVGQhkRYDkAhVmb45Kr8DsArR50ClT5AnygfgA8/nV51JwM=
